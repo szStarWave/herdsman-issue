@@ -1,0 +1,35 @@
+name: 重构 / Refactor (Maintainers)
+description: 跟踪重构机会（维护者）。Track refactoring opportunities (maintainers).
+title: "Refactor: "
+labels: ["refactor"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请先检查是否已有 [重复的 refactor Issue](https://github.com/szStarWave/herdsman-issue/issues?q=is%3Aissue+label%3Arefactor)。
+        Please check for [duplicate refactor issues](https://github.com/szStarWave/herdsman-issue/issues?q=is%3Aissue+label%3Arefactor).
+
+        请自行填写，勿直接粘贴大模型生成内容。
+        Please fill this out yourself; do not paste LLM-generated text.
+
+  - type: textarea
+    id: background-description
+    attributes:
+      label: 背景说明 / Background Description
+      description: |
+        当前痛点是什么？为什么需要重构？
+        What pain points motivate this refactor?
+      placeholder: Detailed motivation for the refactor
+    validations:
+      required: true
+
+  - type: textarea
+    id: possible-approaches
+    attributes:
+      label: 可能方案 / Possible Refactor Approaches
+      description: |
+        可选：列出可行方案或 TODO。
+        Optional: approaches or a todo list.
+      placeholder: Possible approaches
+    validations:
+      required: false

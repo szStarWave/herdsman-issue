@@ -1,0 +1,78 @@
+name: 产品需求 / Requirement
+description: 产品需求（供 PM / 研发对照）。Product requirement for PMs and developers.
+title: "Requirement: "
+labels: ["requirement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本模板用于提交 **产品需求**，供产品经理与研发参考。
+        Use this template for **product requirements** for PMs and developers.
+
+        请自行填写，勿直接粘贴大模型生成内容。
+        Please fill this out yourself; do not paste LLM-generated text.
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级 / Priority
+      options:
+        - P0 - 阻塞 / Blocker
+        - P1 - 高 / High
+        - P2 - 中 / Medium
+        - P3 - 低 / Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景 / Background
+      description: |
+        业务背景、现状痛点或触发原因。
+        Business context, current pain, or what triggered this request.
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目标与目标用户 / Goal & target users
+      description: |
+        希望达成什么？面向哪些用户？
+        What should be achieved, and for whom?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 验收标准 / Acceptance criteria
+      description: |
+        可验证的完成条件（建议条目化）。
+        Verifiable done criteria (prefer a checklist).
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: 非目标 / Out of scope
+      description: |
+        明确本次不包含的内容（可选）。
+        What is explicitly not in scope (optional).
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考资料 / References
+      description: |
+        竞品、设计稿、相关 Issue / 文档链接等。
+        Competitors, designs, related issues/docs, etc.
+    validations:
+      required: false

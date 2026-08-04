@@ -1,0 +1,84 @@
+name: Bug (安装/Install)
+description: 安装、启动或更新失败。Installation, launch, or update failures.
+title: "Install bug: "
+labels: ["bug-unconfirmed", "installation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！本模板用于 **安装 / 启动 / 更新** 相关问题。
+        Thanks for reporting! Use this template for **install / launch / update** problems.
+
+        请自行填写，勿直接粘贴大模型生成内容。
+        Please fill this out yourself; do not paste LLM-generated text.
+
+  - type: textarea
+    id: version
+    attributes:
+      label: 版本 / Version
+      description: Herdsman 版本或构建号。Herdsman version or build number.
+      placeholder: e.g. 2026.06.02 / build xyz
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: 操作系统 / Operating systems
+      description: 已知受影响的系统。Which OS are affected?
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other (请在描述中说明 / please specify)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 问题阶段 / Failure stage
+      description: 问题发生在哪个阶段？When does it fail?
+      multiple: true
+      options:
+        - 首次安装 / First install
+        - 启动应用 / App launch
+        - 在线更新 / OTA update
+        - Runtime / 组件安装
+        - 其他 / Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: info
+    attributes:
+      label: 问题描述与复现步骤 / Problem & steps to reproduce
+      description: |
+        简述现象，并给出可复现步骤。
+        Summarize the problem and list exact steps to reproduce.
+      placeholder: |
+        1. ...
+        2. ...
+        期望 / Expected: ...
+        实际 / Actual: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志 / Relevant logs
+      description: |
+        请粘贴相关日志。日志常见路径：`~/.herdsman/log`、`~/.cache/herdsman/logs`。
+        Paste relevant logs. Common paths: `~/.herdsman/log`, `~/.cache/herdsman/logs`.
+      value: |
+        <details>
+        <summary>Logs</summary>
+
+        ```console
+
+        ```
+        </details>
+    validations:
+      required: true

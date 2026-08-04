@@ -1,0 +1,111 @@
+name: Bug (推理/Inference)
+description: 模型推理或 Runtime 异常（崩溃、乱码、超时等）。Model inference or runtime failures.
+title: "Inference bug: "
+labels: ["bug-unconfirmed", "inference"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！本模板用于 **模型推理 / Runtime** 问题（崩溃、错误输出、超时等）。
+        Thanks for reporting! Use this for **model inference / runtime** issues (crashes, bad output, timeouts, etc.).
+
+        请自行填写，勿直接粘贴大模型生成内容。
+        Please fill this out yourself; do not paste LLM-generated text.
+
+  - type: textarea
+    id: version
+    attributes:
+      label: 版本 / Version
+      description: Herdsman 版本或构建号。Herdsman version or build number.
+      placeholder: e.g. 2026.06.02 / build xyz
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: 操作系统 / Operating systems
+      description: 已知受影响的系统。Which OS are affected?
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other (请在描述中说明 / please specify)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      description: 使用的推理 Runtime。Which runtime were you using?
+      multiple: true
+      options:
+        - llama.cpp
+        - herdsman-TQ
+        - NPU runtime
+        - Foundry Local
+        - sd-cpp
+        - Other (请在描述中说明 / please specify)
+    validations:
+      required: true
+
+  - type: textarea
+    id: hardware
+    attributes:
+      label: 硬件 / Hardware
+      description: CPU / GPU / NPU 等信息。CPU / GPU / NPU details.
+      placeholder: e.g. Ryzen 7 7840HS + RTX 4060 / Intel NPU
+    validations:
+      required: true
+
+  - type: textarea
+    id: model
+    attributes:
+      label: 模型 / Models
+      description: 模型名称、量化与来源链接（如有）。Model name, quantization, and source link if any.
+      placeholder: e.g. Qwen2.5-7B-Instruct Q4_K_M
+    validations:
+      required: false
+
+  - type: textarea
+    id: info
+    attributes:
+      label: 问题描述与复现步骤 / Problem & steps to reproduce
+      description: |
+        简述现象，并给出可复现步骤（含关键参数）。
+        Summarize the problem and exact steps (including key settings).
+      placeholder: |
+        1. ...
+        2. ...
+        期望 / Expected: ...
+        实际 / Actual: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: first_bad
+    attributes:
+      label: 首次出现版本 / First bad version
+      description: 若先前版本正常，请注明从哪一版开始出现。If an older version worked, when did it start?
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志 / Relevant logs
+      description: |
+        请粘贴相关日志。日志常见路径：`~/.herdsman/log`、`~/.cache/herdsman/logs`。
+        Paste relevant logs. Common paths: `~/.herdsman/log`, `~/.cache/herdsman/logs`.
+      value: |
+        <details>
+        <summary>Logs</summary>
+
+        ```console
+
+        ```
+        </details>
+    validations:
+      required: true

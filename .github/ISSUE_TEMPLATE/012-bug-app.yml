@@ -1,0 +1,87 @@
+name: Bug (应用/App UI)
+description: 桌面应用、UI 或应用内交互异常。Desktop app, UI, or in-app interaction bugs.
+title: "App bug: "
+labels: ["bug-unconfirmed", "app-ui"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！本模板用于 **桌面应用 / UI / 应用交互** 问题。
+        Thanks for reporting! Use this for **desktop app / UI / in-app** problems.
+
+        请自行填写，勿直接粘贴大模型生成内容。
+        Please fill this out yourself; do not paste LLM-generated text.
+
+  - type: textarea
+    id: version
+    attributes:
+      label: 版本 / Version
+      description: Herdsman 版本或构建号。Herdsman version or build number.
+      placeholder: e.g. 2026.06.02 / build xyz
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: 操作系统 / Operating systems
+      description: 已知受影响的系统。Which OS are affected?
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Other (请在描述中说明 / please specify)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 功能区域 / Area
+      description: 问题发生在哪个界面或功能？Which UI area or feature?
+      multiple: true
+      options:
+        - 主界面 / Main UI
+        - 模型管理 / Model Manager
+        - 应用中心 / Apps
+        - 设置 / Settings
+        - Persona / Memory
+        - 会议 / Meetings
+        - Gateway / API
+        - Other (请在描述中说明 / please specify)
+    validations:
+      required: true
+
+  - type: textarea
+    id: info
+    attributes:
+      label: 问题描述与复现步骤 / Problem & steps to reproduce
+      description: |
+        简述现象，并给出可复现步骤。如有截图请附上。
+        Summarize the problem and steps. Attach screenshots if helpful.
+      placeholder: |
+        1. ...
+        2. ...
+        期望 / Expected: ...
+        实际 / Actual: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志 / Relevant logs
+      description: |
+        如有相关日志请粘贴。常见路径：`~/.herdsman/log`、`~/.cache/herdsman/logs`。
+        Paste logs if available. Common paths: `~/.herdsman/log`, `~/.cache/herdsman/logs`.
+      value: |
+        <details>
+        <summary>Logs</summary>
+
+        ```console
+
+        ```
+        </details>
+    validations:
+      required: false

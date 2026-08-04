@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 搜索已有 Issue / Search existing issues
+    url: https://github.com/szStarWave/herdsman-issue/issues?q=is%3Aissue
+    about: 提交前请先搜索，避免重复。Please search before opening a new issue.
+  - name: 使用说明 / How to report
+    url: https://github.com/szStarWave/herdsman-issue/blob/main/README.md
+    about: 了解如何选择模板并填写有效反馈。How to choose a template and file a useful report.

@@ -1,0 +1,76 @@
+name: 技术调研 / Research
+description: 跟踪新技术或调研方向。Track a technical research area.
+title: "Research: "
+labels: ["research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请先检查是否已有 [重复的 research Issue](https://github.com/szStarWave/herdsman-issue/issues?q=is%3Aissue+label%3Aresearch)。
+        Please check for [duplicate research issues](https://github.com/szStarWave/herdsman-issue/issues?q=is%3Aissue+label%3Aresearch).
+
+        请自行填写，勿直接粘贴大模型生成内容。
+        Please fill this out yourself; do not paste LLM-generated text.
+
+  - type: checkboxes
+    id: research-stage
+    attributes:
+      label: 调研阶段 / Research Stage
+      description: 标记当前阶段。Track the current stage.
+      options:
+        - label: 背景调研 / Background Research
+        - label: 假设形成 / Hypothesis Formed
+        - label: 方案 / 实现设计 / Strategy or Implementation Forming
+        - label: 结果分析 / Analysis of results
+        - label: 复盘 / 文档 / Debrief or Documentation
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 已有文献与现状 / Existing literature & status quo
+      description: |
+        当前技术现状与调研动机。
+        Current state of the art and motivation.
+    validations:
+      required: false
+
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: 假设 / Hypothesis
+      description: |
+        你认为会怎样工作？预期效果是什么？
+        How do you think this will work, and what is the expected effect?
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: 实现思路 / Implementation
+      description: |
+        是否有可行方案或已有原型？
+        Any approach or prototype ready?
+    validations:
+      required: false
+
+  - type: textarea
+    id: analysis
+    attributes:
+      label: 分析 / Analysis
+      description: |
+        方案表现如何？有何结论？
+        How does the proposed approach behave? Any conclusions?
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志 / Relevant logs
+      description: |
+        如有实验日志可粘贴（会按代码块渲染）。
+        Paste experimental logs if any (rendered as code).
+      render: shell
+    validations:
+      required: false

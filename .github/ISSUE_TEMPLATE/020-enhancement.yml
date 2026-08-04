@@ -1,0 +1,57 @@
+name: 功能增强 / Enhancement
+description: 请求新功能或改进现有能力。Request a feature or improve existing capability.
+title: "Feature Request: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请先 [搜索已有 Issue](https://github.com/szStarWave/herdsman-issue/issues?q=is%3Aissue)，避免重复。
+        Please [search existing issues](https://github.com/szStarWave/herdsman-issue/issues?q=is%3Aissue) before submitting.
+
+        请自行填写，勿直接粘贴大模型生成内容。
+        Please fill this out yourself; do not paste LLM-generated text.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: 前置确认 / Prerequisites
+      description: 提交前请确认。Confirm before submitting.
+      options:
+        - label: 我已搜索相关 Issue，确认这是新的增强请求。/ I searched and this is not a duplicate.
+          required: true
+        - label: 我使用的是较新版本（如可能请注明版本）。/ I am on a recent version (mention it if possible).
+          required: true
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: 功能描述 / Feature Description
+      description: |
+        想要做什么？期望 Herdsman 如何表现？
+        What do you want to do, and how should Herdsman behave?
+      placeholder: Detailed description of the enhancement
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 动机与价值 / Motivation
+      description: |
+        为什么需要？对哪些用户有帮助？
+        Why is this needed, and who benefits?
+      placeholder: Why this feature matters
+    validations:
+      required: true
+
+  - type: textarea
+    id: possible-implementation
+    attributes:
+      label: 可能的实现 / Possible Implementation
+      description: |
+        如有实现思路、参考链接或示意，可写在这里。
+        Optional: ideas, links, or sketches for how it could work.
+      placeholder: Optional implementation ideas
+    validations:
+      required: false
