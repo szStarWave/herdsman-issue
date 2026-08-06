@@ -21,6 +21,20 @@ Issue-only feedback repo for **Herdsman**. Report bugs and requirements for prod
 | 技术调研 / Research | 技术调研跟踪 |
 | 重构 / Refactor | 维护者重构跟踪 |
 
+## 优先级约定 / Priority
+
+提交后请在项目的 **Priority** 字段标注优先级（这是 GitHub Projects 的字段，不是仓库 Label）。
+
+| 优先级 / Priority | 颜色 / Color | 含义 / Meaning |
+| --- | --- | --- |
+| P0 | 红 Red | 阻塞、线上事故，必须立即处理 / Blocker or incident, handle now |
+| P1 | 橙 Orange | 高优，影响核心功能 / High, impacts core functionality |
+| P2 | 绿 Green | 正常排期 / Normal backlog |
+| P3 | 灰 Gray | 低优，可延后 / Low, can be deferred |
+
+- 需先将 Issue 加入对应 Project 才能设置 Priority。
+- 未标注时默认为空，由维护者按影响面评估。
+
 ## 日志路径 / Log paths
 
 - `~/.herdsman/log`
