@@ -13,6 +13,15 @@ body:
         Please fill this out yourself; do not paste LLM-generated text.
 
   - type: textarea
+    id: device
+    attributes:
+      label: 设备配置 / Device
+      description: 设备配置。
+      placeholder: e.g. intel core ultra 5 processor 335, B370, 32G RAM, 32GB VRAM, 80G AISSD
+    validations:
+      required: true
+
+  - type: textarea
     id: version
     attributes:
       label: 版本 / Version
