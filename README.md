@@ -31,3 +31,7 @@ Windows 示例：`C:\Users\<you>\.herdsman\log`、`C:\Users\<you>\.cache\herdsma
 ## 自动清理 / Stale policy
 
 Issue 连续 **60** 天无活动会标记 `stale`；再过 **30** 天仍无活动将自动关闭。带有 `requirement`、`research`、`refactor`、`bug`、`roadmap`、`security`、`help wanted`、`good first issue` 标签的 Issue 会被豁免。
+
+## 测试用例表格
+
+Herdsman牧马人UI功能测试用例.xlsx
